@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}
+ {% endblock %}
+{% block content%}
+    <h1>Blogs</h1>
+   <div>chuj ci w cycte </div>
+    {% for content in blog_list%}
+        <div>{{ content }}</div>
+    {% endfor %}
+{% endblock %}
