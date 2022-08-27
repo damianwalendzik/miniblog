@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+{{content}}
+<h1>Title: {{ obj.title }}</h1>
+<p><strong>Author:</strong> {{ obj.author }}</p>
+<p><strong>Date of publication:</strong> {{ obj.date }}</p> 
+<p><strong>text:</strong> {{ obj.text }}</p>  
+<p><strong>Genre:</strong> {{ obj.genre }}</p>
+
+
+
+{% endblock %}

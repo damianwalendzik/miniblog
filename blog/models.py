@@ -6,7 +6,8 @@ from datetime import datetime
 
 class Genre(models.Model):
     genre = models.CharField(max_length=20,unique=True)
-
+    def __str__(self):
+        return self.genre
 class Blog(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4)
     title = models.CharField(max_length=50)
@@ -19,3 +20,5 @@ class Comment(models.Model):
     blog = models.ForeignKey(Blog, on_delete = models.CASCADE,to_field='id')
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     text = models.CharField(max_length=1000, blank=False)
+    def __str__(self):
+        return self.text
