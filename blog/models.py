@@ -20,5 +20,6 @@ class Comment(models.Model):
     blog = models.ForeignKey(Blog, on_delete = models.CASCADE,to_field='id')
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     text = models.CharField(max_length=1000, blank=False)
+    date=datetime.now()
     def __str__(self):
         return self.text

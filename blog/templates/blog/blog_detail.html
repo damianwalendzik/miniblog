@@ -8,6 +8,8 @@
 <p><strong>text:</strong> {{ obj.text }}</p>  
 <p><strong>Genre:</strong> {{ obj.genre }}</p>
 
-
+{% for comment in comments %}
+    <li>{{comment.author}}, {{comment.date}}, {{comment.text}}</li>
+{% endfor %}
 
 {% endblock %}
